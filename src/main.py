@@ -14,12 +14,12 @@ import time
 #####################################################
 #                    variables                      #
 #####################################################
-
 snake = None
 apple = None
 current_direction = 'RIGHT'
 start_button = None
 retry_button = None
+objective = COLUMNS * ROWS - 3
 
 #####################################################
 #                 config interface                  #
@@ -92,10 +92,11 @@ def actions_auto():
     if check_collisions(x, y):
         game_over()
     else:
-        snake_deplacement_auto(x, y)
         if check_eating(x, y):
             new_apple()
-        if (snake.body_part == ROWS*COLUMNS):
+        else:
+            snake_deplacement_auto(x, y)
+        if (snake.body_part == objective):
             you_won()
         else:
             window.after(SPEED, actions_auto)
@@ -139,10 +140,12 @@ def new_apple():
     global apple, score, snake
     canva.delete('apple')
     snake.add_body_part(apple.coordinates)
-    apple = Apple(canva, snake)
     score += 1
     snake.body_part += 1
     label.config(text=f'SCORE:{score}')
+    if score != objective:
+        apple = Apple(canva, snake)
+    
 
 def game_over():
     canva.delete('snake', 'apple')
