@@ -8,7 +8,7 @@ class Snake:
         self.body_part = 0
         self.coordinates = []
         self.squares = []
-        self.color = '#00FF00'
+        self.color = COLOR_SNAKE
 
         initial_coords = [(1,1), (2,1), (3,1)]
         for (x, y) in initial_coords:

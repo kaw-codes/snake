@@ -8,7 +8,7 @@ class Apple:
         self.snake = snake
         self.coordinates = self.__get_rdm_coord()
         x, y = self.coordinates
-        self.color ='#FF0000'
+        self.color = COLOR_APPLE
         canva.create_oval(x * CELL_SIZE,
                           y * CELL_SIZE,
                           x * CELL_SIZE + CELL_SIZE,

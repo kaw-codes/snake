@@ -30,7 +30,7 @@ label.pack()
 
     # draughtboard :
 canva = tk.Canvas(window, 
-                  background=BACKGROUND_COLOR_0,
+                  background="#FF0000",
                   height=ROWS*CELL_SIZE-1, 
                   width=COLUMNS*CELL_SIZE-1)
 canva.pack()
@@ -41,9 +41,9 @@ for i in range(ROWS):
         x1 = x0 + CELL_SIZE
         y1 = y0 + CELL_SIZE
         if (i + j) % 2 == 0:
-            color = BACKGROUND_COLOR_1
+            color = COLOR_BACKGROUND_1
         else:
-            color = BACKGROUND_COLOR_2
+            color = COLOR_BACKGROUND_2
         canva.create_rectangle(x0, y0, x1, y1, fill=color)
     
     # commands :
