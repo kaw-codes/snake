@@ -6,11 +6,6 @@ from apple import Apple
 from config import *
 import time
 
-# TODO : the game is won when all the table is green
-#   - cond : (ROWS*COLUMNS - 3)
-#   - delete first tail then head
-#   - make the head grow when eating
-
 #####################################################
 #                    variables                      #
 #####################################################
