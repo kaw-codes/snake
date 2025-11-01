@@ -1,5 +1,5 @@
 ## Synopsis
-snake game coded in Python
+Snake game coded in Python.
 
 ## Setup
 
@@ -9,7 +9,7 @@ Then, run this to start the game :
 python3 src/main.py
 ```
 
-You can edit the file `config.py` to change the number of rows & columns, the speed, the colors, and the cells' size
+You can edit the file `config.py` to change the number of rows & columns, the speed, the colors, and the size of the cells.
 
 ## Skills acquired
 - tkinter
